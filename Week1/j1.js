@@ -10,23 +10,33 @@ window.onload = function()
 
     var btn = document.getElementById("winner");
     var result = document.getElementById("result");
+    
     btn.onclick = function dispResult()
     {
         var out = document.getElementById("output");
         output.style.display = "block";
-        var atotal = (a3pt.value * 3) + (a2pt.value * 2) + (a1pt.value * 1);
-        var btotal = (b3pt.value * 3) + (b2pt.value * 2) + (b1pt.value * 1);
-        if((atotal)>(btotal)){
+        var atotal = (parseInt(a3pt.value) * 3) + (parseInt(a2pt.value) * 2) + parseInt((a1pt.value) * 1);
+        var btotal = (parseInt(b3pt.value) * 3) + (parseInt(b2pt.value) * 2) + (parseInt(b1pt.value) * 1);
+        
+        
+        if(atotal > btotal){
             console.log("Winner is A");
             result.innerHTML = "A";
-
-        } else if((atotal)<(btotal)){
+            
+        }
+        else if(atotal < btotal){
             console.log("Winner is B");
             result.innerHTML = "B";
+            
+        }
+        
+       else if(atotal == btotal){
+            console.log("It is Tie");
+            result.innerHTML = "Match is Tie";
         }
         else {
-            console.log("No Results yet entered");
-            result.innerHTML ="No Results yet entered";
+            result.innerHTML = "Results are not entered yet";
         }
+        
     };
 };
