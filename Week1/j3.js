@@ -47,16 +47,63 @@ window.onload = function()
             var out4 = out3 + D3;
             var out5 = out4 + D4;
             var out = [out1,out2,out3,out4,out5];
-            for(var i=0;i<=4;i++){
-                successresult.innerHTML += out[i] + " ";
-            }
+
                 // successresult.innerHTML += out1 + " ";
                 // successresult.innerHTML += out2 + " ";
                 // successresult.innerHTML += out3 + " ";
                 // successresult.innerHTML += out4 + " ";
                 // successresult.innerHTML += out5 + " ";
-            //second line
-            
+               // successresult.innerHTML += "<br>";
+            for(var j=0;j<=4;j++)
+            {  
+                successresult.innerHTML += "<br>"; 
+                for(var i=0;i<=4;i++)
+                {
+                    if((out[j]-out[i])<0){
+                        var positive_num = Math.abs((out[j]-out[i]));//math.abs - convert negative into positive
+
+                    }else
+                    { 
+                        positive_num = (out[j]-out[i]);
+                    }
+                    successresult.innerHTML += positive_num + " ";
+               
+                }
+            }
+            // for(var i=0;i<=4;i++){
+            //     if((out1-out[i])<0){
+            //         var positive_num = Math.abs((out1-out[i]));
+
+            //     }else
+            //     { 
+            //         positive_num = (out1-out[i]);
+            //     }
+            //     successresult.innerHTML += positive_num + " ";
+            // }
+            // //second line
+            // successresult.innerHTML += "<br>";
+            // for(var i=0;i<=4;i++){
+            //     if((out2-out[i])<0){
+            //         var positive_num = Math.abs((out2-out[i]));
+
+            //     }else
+            //     { 
+            //         positive_num = (out2-out[i]);
+            //     }
+            //     successresult.innerHTML += positive_num + " ";
+            // }
+            // //third line
+            // successresult.innerHTML += "<br>";
+            // for(var i=0;i<=4;i++){
+            //     if((out3-out[i])<0){
+            //         var positive_num = Math.abs((out3-out[i]));
+
+            //     }else
+            //     { 
+            //         positive_num = (out3-out[i]);
+            //     }
+            //     successresult.innerHTML += positive_num + " ";
+            // }
         }
         
     };
