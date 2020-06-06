@@ -1,0 +1,85 @@
+h1{
+    display:none;
+}
+#container{
+    display:inline-block;
+}
+/* employee card */
+#outbox{
+    width: 16em;
+    height:25em;
+    border: 0.01em solid black;
+    position: relative;
+    
+    
+}
+#outbox2{
+    width: 16em;
+    height:25em;
+    border: 0.01em solid black;
+    position: relative;
+    
+    
+}
+/* image section displaying inside the employee card */
+#imgsection{
+    position:absolute;
+    left:15%;
+    top:8%;
+    text-align: center;
+}
+#imgsection2{
+    position:absolute;
+    left:15%;
+    top:8%;
+    text-align: center;
+}
+#myimg{
+    border-radius: 50%;
+    width:10em;
+    height:10em;
+   
+    
+}
+#myimg2{
+    border-radius: 50%;
+    width:10em;
+    height:10em;
+   
+    
+}
+/* bio of employee written underneath the image in center */
+#employeebio{
+   left:5%;
+    bottom:25%;
+    position:absolute;
+
+}
+#employeebio2{
+    left:5%;
+     bottom:25%;
+     position:absolute;
+ 
+ }
+/* roles to be added inside the rolebox */
+.employeerole{
+    width:6em;
+    height:2em;
+    display:inline-block;
+    margin-right:0.5em;
+    text-align: center;
+    padding-top:0.5em;
+}
+/* section where employee roles will be added at the bottom of the card */
+#rolebox{
+    position:absolute;
+    bottom:5%;
+    left:2%; 
+    
+}
+#rolebox2{
+    position:absolute;
+    bottom:5%;
+    left:2%; 
+    
+}
