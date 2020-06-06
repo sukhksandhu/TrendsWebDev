@@ -1,9 +1,7 @@
 h1{
     display:none;
 }
-#container{
-    display:inline-block;
-}
+
 /* employee card */
 #outbox{
     width: 16em;
@@ -14,6 +12,14 @@ h1{
     
 }
 #outbox2{
+    width: 16em;
+    height:25em;
+    border: 0.01em solid black;
+    position: relative;
+    
+    
+}
+#outbox3{
     width: 16em;
     height:25em;
     border: 0.01em solid black;
@@ -34,6 +40,12 @@ h1{
     top:8%;
     text-align: center;
 }
+#imgsection3{
+    position:absolute;
+    left:15%;
+    top:8%;
+    text-align: center;
+}
 #myimg{
     border-radius: 50%;
     width:10em;
@@ -48,6 +60,14 @@ h1{
    
     
 }
+#myimg3{
+    border-radius: 50%;
+    width:10em;
+    height:10em;
+   
+    
+}
+
 /* bio of employee written underneath the image in center */
 #employeebio{
    left:5%;
@@ -61,8 +81,30 @@ h1{
      position:absolute;
  
  }
+ #employeebio3{
+    left:5%;
+     bottom:25%;
+     position:absolute;
+ 
+ }
 /* roles to be added inside the rolebox */
-.employeerole{
+#employeerole{
+    width:6em;
+    height:2em;
+    display:inline-block;
+    margin-right:0.5em;
+    text-align: center;
+    padding-top:0.5em;
+}
+#employeerole2{
+    width:6em;
+    height:2em;
+    display:inline-block;
+    margin-right:0.5em;
+    text-align: center;
+    padding-top:0.5em;
+}
+#employeerole3{
     width:6em;
     height:2em;
     display:inline-block;
@@ -78,6 +120,12 @@ h1{
     
 }
 #rolebox2{
+    position:absolute;
+    bottom:5%;
+    left:2%; 
+    
+}
+#rolebox3{
     position:absolute;
     bottom:5%;
     left:2%; 
