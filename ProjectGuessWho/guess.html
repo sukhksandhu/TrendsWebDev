@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+	<!-- I referenced this code from my instructor Christine Bittle for the purpose of learrning on 2 July,2020
+		 https://github.com/christinebittle/vuepractice/blob/master/vue_6.html -->
+	<head>
+		<title>Vue Components</title>
+		<meta charset="UTF-8">
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<style>
+			h1{
+				text-align:center;
+			}
+			.square{width:100px;height:100px;border:1px solid rgb(10, 3, 3); display:inline-block; position:absolute}
+		</style>
+	</head>
+	<body>
+	
+	<div id="app">
+		<h1>Guess Game!</h1>
+		
+		<box 
+			v-for="box in bigbox"
+			v-bind:color="box.color"
+			v-bind:x="box.x"
+			v-bind:y="box.y"
+			v-bind:number="box.number"
+			v-bind:key="box.id">
+		</box>
+	</div>
+	
+	<script>
+	Vue.component('box',{
+		props:['color','x','y','number'],	
+		template:
+		`<span 
+			v-bind:class="'square'" 
+			v-bind:style="{'background':color, 'left':x +'%','top':y +'%'}"
+			
+			v-on:click="prompt();"> 
+		</span>`,
+		methods:{
+			prompt:function(){
+				
+				// if pic is smiley face image at the back the  alert you win	
+			
+				//alert('You are winner');
+				
+				// alert('You clicked the '+ this.id +' square!');
+				if(this.number==5){	
+				// alert('You clicked the '+ this.number +' square!');	
+				
+				this.color='pink';
+				alert("Hooray!!!!!Winner");
+				//here i want to display image inside the box with smiley
+				}
+				else{
+					this.color="black";
+					//here i want to show sad smiley image
+				}
+				
+			}	
+		}
+	
+	});
+	
+	var app = new Vue({
+		el: '#app',
+		
+		data:{
+			//i am using number because id was not working so i debugged with number and it is working fine to grab the
+			//box number 
+			bigbox:[
+				{id:1, number:1, color:'grey',  x:20, y:10},
+				{id:2, number:2, color:'grey', x:30,y:10},
+				{id:3, number:3, color:'grey', x:40,y:10},
+				{id:4, number:4, color:'grey', x:50,y:10},
+				{id:5, number:5, color:'grey',x:60,y:10},
+				{id:6, number:6,  color:'grey',x:70,y:10},
+				{id:7, number:7, color:'grey',x:20,y:30},
+				{id:8, number:8,  color:'grey',x:30,y:30},
+				{id:9, number:9, color:'grey',x:40,y:30},
+				{id:10, number:10, color:'grey',x:50,y:30},
+				{id:11, number:11, color:'grey',x:60,y:30},
+				{id:12, number:12, color:'grey',x:70,y:30},
+				{id:13, number:13, color:'grey',x:20,y:50},
+				{id:14, number:14, color:'grey', x:30,y:50},
+				{id:15, number:15, color:'grey', x:40,y:50},
+				{id:16, number:16, color:'grey', x:50,y:50},
+				{id:17, number:17,  color:'grey', x:60,y:50},
+				{id:18, number:18, color:'grey', x:70,y:50},
+			]
+		}
+		
+		
+	});
+	</script>
+	
+	</body>
+</html>
