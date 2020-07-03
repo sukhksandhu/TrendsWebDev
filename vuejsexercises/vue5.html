@@ -13,8 +13,10 @@
 	<body>
 	
 	<div id="app">
+		<!-- I tried increasing height here by calling functiona increasebox on hover -->
         <div v-on:mouseover= "increasebox();" v-on:mouseleave= "normalbox();" v-bind:class="{redbox:true}"></div>
 		<div v-bind:class="{box:true, hidden:boxHidden}">{{message}}</div>
+		<!-- i am using here if else statement to show or hide  -->
         <button v-if="boxHidden==true" v-on:click="showhide();">{{ showmsg }} </button>
         <button v-else="boxHidden==false" v-on:click="showhide();"> {{ hidemsg }}</button>
 	</div>
@@ -27,7 +29,8 @@
 			boxHeight:200,
 			boxHidden : false,
 			message  : 'Make me disappear!',
-            hidemsg : 'Hide',
+			// I created variables here hide and show
+			hidemsg : 'Hide',
             showmsg : 'Show'
 		},
 		methods:{
@@ -41,6 +44,7 @@
 				}
 			},
             increasebox : function(){
+				// i tried with changing css here 
              this.display.style.height = "110px";
             },
 			normalbox: function(){
