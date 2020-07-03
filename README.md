@@ -21,3 +21,4 @@ according to me, I think it will be a bit challenging and brain-storming at the 
  I designed Guess game. I took the idea from the vue6 exercise and insteaf of circles , i changed to squares. I want to build the game when user makes a right guess,
  the smiley picture is shown but when user makes the wrong guess, sad emoji picture is shown.
  
+ 
